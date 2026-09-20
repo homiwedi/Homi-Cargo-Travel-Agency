@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Homi Cargo & Travel</title>
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #ff9f43;
+            --dark: #2c3e50;
+            --light: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        nav {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo { font-weight: bold; color: var(--primary); text-decoration: none; font-size: 1.2rem;}
+        .back-link { text-decoration: none; color: var(--dark); font-weight: 600; }
+        
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 { color: var(--primary); text-align: center; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .img-kampala { background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+        .img-asmera { background-image: url('https://images.unsplash.com/photo-1547471080-7cb2f5c1f7b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); } /* Placeholder for Asmara/Eritrea vibe */
+        .img-flight { background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+        
+        .card-body { padding: 20px; }
+        .card-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: var(--primary);}
+        .card-price { color: var(--secondary); font-weight: bold; font-size: 1.1rem; margin-bottom: 15px; display:block;}
+        .btn-book {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-book:hover { background-color: #004494; }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">HOMI CARGO & TRAVEL</a>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+</nav>
+
+<div class="container">
+    <h1>Explore Destinations & Deals</h1>
+    <p style="text-align:center;">Special offers for Kampala, Asmara, and International Routes.</p>
+
+    <div class="grid">
+        <!-- Item 1: Kampala Tour -->
+        <div class="card">
+            <div class="card-img img-kampala"></div>
+            <div class="card-body">
+                <div class="card-title">Kampala City Tour</div>
+                <p>Experience the vibrant culture of Uganda's capital. Includes Lake Victoria views and local markets.</p>
+                <span class="card-price">$150 / Person</span>
+                <a href="index.html#contact" class="btn-book">Book This Tour</a>
+            </div>
+        </div>
+
+        <!-- Item 2: Asmara Heritage -->
+        <div class="card">
+            <div class="card-img img-asmera"></div>
+            <div class="card-body">
+                <div class="card-title">Asmara Heritage Walk</div>
+                <p>Discover the Italian modernist architecture of Eritrea's beautiful capital city.</p>
+                <span class="card-price">$200 / Person</span>
+                <a href="index.html#contact" class="btn-book">Book This Tour</a>
+            </div>
+        </div>
+
+        <!-- Item 3: Flight Deal -->
+        <div class="card">
+            <div class="card-img img-flight"></div>
+            <div class="card-body">
+                <div class="card-title">Uganda ➔ Middle East</div>
+                <p>Discounted economy class tickets. Limited seats available for next month departures.</p>
+                <span class="card-price">From $450 Roundtrip</span>
+                <a href="index.html#contact" class="btn-book">Check Availability</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Need custom pricing? Call us directly!<br>
+    <strong>+256 700 000 000</strong>
+</footer>
+
+</body>
+  </html>
