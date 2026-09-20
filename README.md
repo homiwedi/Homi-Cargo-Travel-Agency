@@ -3,111 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homi Cargo & Travel | Asmara & World Wide</title>
+    <title>Book Your Trip - Homi Cargo & Travel</title>
     <style>
-        :root {
-            --primary: #0056b3; /* Deep Blue */
-            --secondary: #ff9f43; /* Orange/Gold for accents */
-            --dark: #2c3e50;
-            --light: #f4f7f6;
-            --white: #ffffff;
-        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
         }
-        /* Navigation */
         nav {
-            background-color: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 1rem 5%;
+            background-color: #0056b3;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-        }
-        .btn-nav {
-            background-color: var(--primary);
-            color: white !important;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             color: white;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
+            font-weight: bold;
+            text-decoration: none;
             font-size: 1.2rem;
-            max-width: 600px;
         }
-        .cta-button {
-            margin-top: 20px;
-            background-color: var(--secondary);
+        .back-link {
             color: white;
-            padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
-            transition: 0.3s;
         }
-        .cta-button:hover {
-            transform: scale(1.05);
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
         }
-
-        /* Services Grid */
-        .section-title {
+        h1 {
+            color: #0056b3;
             text-align: center;
-            margin: 50px 0 20px;
-            color: var(--primary);
         }
-        .services-container {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin-top: 30px;
         }
-        .service-card {
+        .card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Using simple colors if images fail to load */
+        .img-kampala { background-color: #ff9f43; } 
+        .img-asmera { background-color: #00a8e8; }
+        .img-flight { background-color: #6c5ce7; }
+        
+        .card-body {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+        .card-price {
+            color: #ff9f43;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .btn-book {
+            display: inline-block;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        footer {
             text-align: center;
-            border-top: 5px solid var(--primary);
+            padding: 20px;
+            margin-top: 50px;
+            background: #eee;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">HOMI CARGO & TRAVEL</a>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+</nav>
+
+<div class="container">
+    <h1>Explore Destinations & Deals</h1>
+    <p style="text-align:center;">Special offers for Kampala, Asmara, and International Routes.</p>
+
+    <div class="grid">
+        <!-- Item 1: Kampala Tour -->
+        <div class="card">
+            <div class="card-img img-kampala"></div>
+            <div class="card-body">
+                <div class="card-title">Kampala City Tour</div>
+                <p>Experience the vibrant culture of Uganda's capital. Includes Lake Victoria views and local markets.</p>
+                <span class="card-price">$150 / Person</span>
+                <a href="index.html#contact" class="btn-book">Book This Tour</a>
+            </div>
+        </div>
+
+        <!-- Item 2: Asmara Heritage -->
+        <div class="card">
+            <div class="card-img img-asmera"></div>
+            <div class="card-body">
+                <div class="card-title">Asmara Heritage Walk</div>
+                <p>Discover the Italian modernist architecture of Eritrea's beautiful capital city.</p>
+                <span class="card-price">$200 / Person</span>
+                <a href="index.html#contact" class="btn-book">Book This Tour</a>
+            </div>
+        </div>
+
+        <!-- Item 3: Flight Deal -->
+        <div class="card">
+            <div class="card-img img-flight"></div>
+            <div class="card-body">
+                <div class="card-title">Uganda ➔ Middle East</div>
+                <p>Discounted economy class tickets. Limited seats available for next month departures.</p>
+                <span class="card-price">From $450 Roundtrip</span>
+                <a href="index.html#contact" class="btn-book">Check Availability</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Need custom pricing? Call us directly!<br>
+    <strong>+256 700 000 000</strong>
+</footer>
+
+</body>
+</html>            border-top: 5px solid var(--primary);
         }
         .price-tag {
             font-size: 2rem;
